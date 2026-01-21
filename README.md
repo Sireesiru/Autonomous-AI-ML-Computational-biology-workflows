@@ -5,8 +5,7 @@ This repository documents a facility-scale workflow for microscopy data acquisit
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/d7724ca1-aee5-4d6e-99fd-83ecd7d3dc56" />
 
-## Scope and Design Philosophy
-
+## Scope and Design 
 This repository focuses on:
 - End-to-end workflow design from instrument data acquisition to ML-enabled analysis
 - Standardization of heterogeneous microscopy data using sidpy and HDF5
