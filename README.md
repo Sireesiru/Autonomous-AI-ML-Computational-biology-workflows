@@ -18,16 +18,7 @@ This repository focuses on:
 Components that depend on internal networking, security policies, or facility-specific services are documented architecturally rather than provided as executable code.
 
 ## High-Level Workflow
-Microscopy data acquisition
-           ↓
-Standardized data ingestion
-           ↓
-Deep learning–based image segmentation
-           ↓
-Morphological feature extraction
-           ↓
-Quantitative biological interpretation
-           ↓
-Human-guided refinement (if required)    
+<img width="742" height="531" alt="image" src="https://github.com/user-attachments/assets/1bc670f1-fa55-4e84-b274-e7d11899af2a" />
+    
 
 
