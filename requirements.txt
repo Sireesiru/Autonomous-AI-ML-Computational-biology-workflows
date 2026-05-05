@@ -1,0 +1,38 @@
+# Core data handling
+numpy==1.25.2
+pandas==2.3.0
+h5py==3.14.0
+scipy==1.11.4
+
+# Microscopy file reading
+sidpy==0.12.8
+pyNSID==0.0.7.2
+SciFiReaders==0.12.0
+igor2==0.5.12
+gwyfile==0.2.0
+
+# ML / Computer Vision
+torch==2.8.0
+torchvision==0.23.0
+ultralytics==8.3.221
+scikit-learn==1.6.1
+scikit-image==0.22.0
+opencv-python==4.8.1.78
+
+# Dashboard / Visualization
+dash==3.2.0
+plotly==6.3.1
+matplotlib==3.9.4
+
+# NOMAD / Metadata
+requests==2.32.5
+PyYAML==6.0.3
+openpyxl==3.1.5
+
+# QR codes
+qrcode==8.2
+pillow==11.3.0
+
+# Server
+fastapi==0.128.0
+uvicorn==0.39.0
