@@ -34,6 +34,8 @@ pip install sidpy h5py numpy matplotlib dash plotly
 ## Usage
 
 > This workflow runs within the **CNMS Virtual Machines at Oak Ridge National Laboratory**. External replication requires equivalent cloud infrastructure. The workflow uses a client-server architecture.
+<img width="500" height="520" alt="network" src="https://github.com/user-attachments/assets/6de5a439-69ba-4ea9-9bec-2d2fb8be6d2c" />
+
 
 ### 1. Set up NOMAD-Oasis
 Deploy a local NOMAD instance and containerize its components using Docker Compose.
@@ -55,7 +57,6 @@ python gui.py
 ```
 Enter the port number from Step 3, your NOMAD credentials, and the folder path to watch. Once submitted, the server authenticates your credentials and initiates `ibw_watcher_v2a.py`, which monitors the specified folder continuously. Every new incoming file is converted to HDF5, uploaded to NOMAD, and its metadata extracted from raw image headers and pushed automatically.
 
-![network.tif](https://github.com/user-attachments/files/27416905/network.tif)
 
 ### 5. Capture sample-specific metadata using a Custom Schema
 As a prerequisite, import **braveschemasecond.archive.yaml** into your NOMAD instance, then run:
