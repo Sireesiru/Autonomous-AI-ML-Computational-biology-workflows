@@ -18,42 +18,36 @@ Components that depend on internal networking, security policies, or facility-sp
 ## High-Level Workflow
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/4447db65-1d3f-42ec-abf1-148b969e7a49" />
 
-## 📁 Repository Structure
-
+## Repository Structure
 ```
 AI-ML-Computational-workflows/
 ├── Data/                        # Standardized reference datasets
 ├── Standardization/             # Scripts to convert vendor formats → HDF5
 ├── metadata into NOMAD/         # Metadata extraction and NOMAD upload tools
 └── Dash and ML analysis/        # Interactive dashboards and ML segmentation
-
-## ⚙️ Requirements
+```
+## Requirements
 
 ```bash
 pip install sidpy h5py numpy matplotlib dash plotly
-
-
+```
 ## Usage
-
 ### 1. Clone this repository
 ```bash
 git clone https://github.com/Sireesiru/AI-ML-Computational-workflows.git
 cd AI-ML-Computational-workflows
 ```
-
 ### 2. Standardize raw microscopy data
 ```bash
 cd Standardization
 python ibw_watcher_v2a.py
 ```
-
 ### 3. Extract and upload metadata to NOMAD
 ```bash
 cd "metadata into NOMAD"
 python excel_to_nomad_json.py
 python UPLOAD_ID_sample_name_mapping.py
 ```
-
 ### 4. Generate QR codes for sample tracking
 ```bash
 cd "metadata into NOMAD"
