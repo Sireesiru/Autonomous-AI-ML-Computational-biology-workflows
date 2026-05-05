@@ -16,7 +16,7 @@ This repository focuses on:
 Components that depend on internal networking, security policies, or facility-specific services are documented architecturally rather than provided as executable code.
 
 ## High-Level Workflow
-<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/4447db65-1d3f-42ec-abf1-148b969e7a49" />
+
 
 ## Repository Structure
 ```
@@ -34,7 +34,8 @@ pip install sidpy h5py numpy matplotlib dash plotly
 ## Usage
 
 > This workflow runs within the **CNMS Virtual Machines at Oak Ridge National Laboratory**. External replication requires equivalent cloud infrastructure. The workflow uses a client-server architecture.
-<img width="300" height="200" alt="network" src="https://github.com/user-attachments/assets/6de5a439-69ba-4ea9-9bec-2d2fb8be6d2c" />
+<img width="500" height="300" alt="network" src="https://github.com/user-attachments/assets/577341a6-ee89-4398-bfe8-df07a711acce" />
+
 
 
 ### 1. Set up NOMAD-Oasis
@@ -49,7 +50,7 @@ git clone https://github.com/Sireesiru/AI-ML-Computational-workflows.git
 cd Standardization
 python server_1b.py
 ```
-Note the **port number** printed in the terminal — you will need it in the next step.
+Note the **port number** printed in the terminal. This is need it in the next step.
 
 ### 4. Launch the GUI
 ```bash
@@ -81,6 +82,7 @@ python AFM_dash_app.py
 python EM_dash_app_thickness.py
 ```
 Launches interactive Dash apps to visualize quantitative plots of AFM and electron microscopy datasets.
+<img width="500" height="500" alt="Dash" src="https://github.com/user-attachments/assets/b402fd75-2886-48cd-b846-794ba521993d" />
 
 ### 8. Human-in-the-Loop model refinement
 To improve segmentation performance, fine-tune your models using additional synthetic bacterial images from [SimuScan](https://github.com/Rmillansol/SimuScan-AFMtools) and evaluate for improvement.
