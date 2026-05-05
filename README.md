@@ -26,17 +26,12 @@ AI-ML-Computational-workflows/
 ├── Standardization/             # Scripts to convert vendor formats → HDF5
 ├── metadata into NOMAD/         # Metadata extraction and NOMAD upload tools
 └── Dash and ML analysis/        # Interactive dashboards and ML segmentation
-```
-
----
 
 ## ⚙️ Requirements
 
 ```bash
 pip install sidpy h5py numpy matplotlib dash plotly
-```
 
----
 
 ## Usage
 
