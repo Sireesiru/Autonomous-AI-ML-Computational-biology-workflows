@@ -81,3 +81,11 @@ Launches interactive Dash apps to visualize quantitative plots of AFM and electr
 
 ### 8. Human-in-the-Loop model refinement
 To improve segmentation performance, fine-tune your models using additional synthetic bacterial images from [SimuScan](https://github.com/Rmillansol/SimuScan-AFMtools) and evaluate for improvement.
+
+## Author
+Developed at the Center for Nanophase Materials Sciences (CNMS), Oak Ridge National Laboratory.
+
+Contact: **Sita Sirisha Madugula** — (mailto:madugulas@ornl.gov) | [ORCID]([https://orcid.org/your-orcid](https://orcid.org/0000-0001-9944-117X)
+
+## License
+The contents of this repository are licensed under the [MIT License](LICENSE).  
