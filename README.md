@@ -34,7 +34,7 @@ pip install sidpy h5py numpy matplotlib dash plotly
 ## Usage
 
 > This workflow runs within the **CNMS Virtual Machines at Oak Ridge National Laboratory**. External replication requires equivalent cloud infrastructure. The workflow uses a client-server architecture.
-<img width="500" height="520" alt="network" src="https://github.com/user-attachments/assets/6de5a439-69ba-4ea9-9bec-2d2fb8be6d2c" />
+<img width="300" height="200" alt="network" src="https://github.com/user-attachments/assets/6de5a439-69ba-4ea9-9bec-2d2fb8be6d2c" />
 
 
 ### 1. Set up NOMAD-Oasis
