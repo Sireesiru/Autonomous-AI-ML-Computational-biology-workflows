@@ -1,0 +1,92 @@
+# Workflow Architecture Overview
+
+This repository implements a modular, facility-scale framework for handling
+heterogeneous microscopy data and enabling downstream machine-learning workflows.
+The architecture is designed to be adaptable across environments that require
+secure separation between data acquisition systems and centralized analysis
+resources.
+
+## Architectural Principles
+
+The workflow is guided by the following principles:
+
+- **Separation of concerns** between data acquisition, processing, and analysis
+- **Standardization-first design** to enable ML-readiness across modalities
+- **Metadata-centric data management** to support reproducibility and FAIR access
+- **Human-guided refinement** rather than fully autonomous learning
+- **Portability** across on-premises and cloud-based infrastructures
+
+## System Components
+
+### 1. Data Acquisition Layer
+
+Microscopy instruments (e.g., AFM, Cryo-EM) generate raw data in vendor-specific
+formats. Instrument computers may operate on isolated networks and do not require
+direct connectivity to analysis resources.
+
+Data are transferred to a centralized storage location using controlled handoff
+mechanisms (e.g., GUI-assisted transfer).
+
+### 2. Data Standardization and Ingestion
+
+The `standardization/convert_and_watch.py` module monitors designated directories
+for new files and performs:
+
+- Format-specific parsing using SciFiReaders
+- Conversion to sidpy datasets
+- Serialization into HDF5 files following NeXus-compatible structures
+- Attachment of instrument and experiment metadata
+
+This step ensures that downstream workflows operate on consistent,
+self-describing data representations regardless of original modality.
+
+### 3. Orchestration and Control
+
+Workflow execution is coordinated using lightweight orchestration components
+located in the `orchestration/` directory:
+
+- `server_example.py` illustrates server-side triggering of ingestion pipelines
+- `gui_client_example.py` demonstrates user-facing metadata entry and workflow initiation
+
+These components demonstrate how user input and automated processing are decoupled.
+
+### 4. Machine Learning–Enabled Analysis
+
+ML-based analysis operates on standardized HDF5 datasets and includes:
+
+- Model-agnostic inference pipelines
+- Segmentation and morphological feature extraction
+- Quantitative biological metrics computation
+
+Training pipelines and model weights are intentionally excluded to maintain
+generality and protect ongoing research.
+
+### 5. Visualization and Human-Guided Refinement
+
+Interactive visualization tools implemented using Dash enable:
+
+- Inspection of segmentation outputs
+- Exploration of morphological distributions
+- Manual assessment and refinement where necessary
+
+Human-guided refinement is used to ensure biological consistency rather than
+automated model retraining.
+
+### 6. Metadata Management and Traceability
+
+Structured metadata are generated programmatically (e.g., from spreadsheets)
+and stored alongside data, enabling traceability across experiments, uploads,
+and derived analyses.
+
+## Adaptability
+
+Although demonstrated in a scientific user-facility context, the architecture
+presented here is applicable to any environment that requires:
+
+- Handling of heterogeneous, multimodal scientific data
+- Standardized, ML-ready data representations
+- Controlled data movement across network boundaries
+- Scalable downstream analysis pipelines
+
+Instrument types, file formats, and deployment details may vary, but the core
+workflow patterns remain transferable.
