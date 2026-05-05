@@ -32,34 +32,52 @@ AI-ML-Computational-workflows/
 pip install sidpy h5py numpy matplotlib dash plotly
 ```
 ## Usage
-### 1. Clone this repository
+
+> This workflow runs within the **CNMS Virtual Machines at Oak Ridge National Laboratory**. External replication requires equivalent cloud infrastructure. The workflow uses a client-server architecture.
+
+### 1. Set up NOMAD-Oasis
+Deploy a local NOMAD instance and containerize its components using Docker Compose.
+
+### 2. Clone this repository
 ```bash
 git clone https://github.com/Sireesiru/AI-ML-Computational-workflows.git
-cd AI-ML-Computational-workflows
 ```
-### 2. Standardize raw microscopy data
+### 3. Start the server
 ```bash
 cd Standardization
-python ibw_watcher_v2a.py
+python server_1b.py
 ```
-### 3. Extract and upload metadata to NOMAD
+Note the **port number** printed in the terminal — you will need it in the next step.
+
+### 4. Launch the GUI
+```bash
+python gui.py
+```
+Enter the port number from Step 3, your NOMAD credentials, and the folder path to watch. Once submitted, the server authenticates your credentials and initiates `ibw_watcher_v2a.py`, which monitors the specified folder continuously. Every new incoming file is converted to HDF5, uploaded to NOMAD, and its metadata extracted from raw image headers and pushed automatically.
+
+### 5. Capture sample-specific metadata using a Custom Schema
+As a prerequisite, import **braveschemasecond.archive.yaml** into your NOMAD instance, then run:
 ```bash
 cd "metadata into NOMAD"
-python excel_to_nomad_json.py
+python excel_to_nomad_yaml.py
 python UPLOAD_ID_sample_name_mapping.py
 ```
-### 4. Generate QR codes for sample tracking
+`excel_to_nomad_yaml.py` converts an Excel sheet of sample metadata into YAML files rendered via the custom schema. `UPLOAD_ID_sample_name_mapping.py` generates a mapping file linking sample names to their NOMAD upload IDs.
+
+### 6. Generate QR codes for sample tracking
 ```bash
 cd "metadata into NOMAD"
 python get_QR.py
 ```
+Generates QR codes from NOMAD URLs, linking physical samples to their complete digital records.
 
-### 5. Launch the ML analysis dashboard
+### 7. Launch the ML analysis dashboards
 ```bash
 cd "Dash and ML analysis"
-python gui.py
+python AFM_dash_app.py
+python EM_dash_app_thickness.py
 ```
+Launches interactive Dash apps to visualize quantitative plots of AFM and electron microscopy datasets.
 
-    
-
-
+### 8. Human-in-the-Loop model refinement
+To improve segmentation performance, fine-tune your models using additional synthetic bacterial images from [SimuScan](https://github.com/Rmillansol/SimuScan-AFMtools) and evaluate for improvement.
