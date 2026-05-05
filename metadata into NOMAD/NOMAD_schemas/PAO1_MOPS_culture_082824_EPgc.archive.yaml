@@ -1,0 +1,43 @@
+data:
+  m_def: ../upload/raw/braveschemasecond.archive.yaml#/definitions/sections/Section_one
+  sample_name: PAO1_MOPS_culture_082824_EPgc
+  preparer: Spenser
+  date_prepared: '2024-08-28T00:00:00'
+  sample_comment: Grown in MOPS + glucose (gc)
+  species: P. aeruginosa PAO1
+  medium: MOPS + glucose
+  temperature: 37.0
+  culture_details: Overnight cultures were recorded to have unblanked ODs of 0.172 (gt), 0.298 (gc), and 0.196 (s). These were read on the Cytation and are unreliable (see lab notebook). Cells were fixed and resuspended in medium before being given to Alexis.
+  biofilm: true
+  od600: Unknown
+  substrate: none (cell culture)
+  replicates: 'no'
+  volume_cells_added: 1 mL
+  incubation_temp: 37
+  medium_replaced: 'no'
+  incubation_time: 2 days
+  washing: 4& PFA (15 min), washed w/ PBS 1x, resuspended in medium
+  fixed: 'yes'
+  stains: none
+  timecourse: 'no'
+  eln_link: Lab activity
+  type_of_imaging_1: 'None '
+  date_imaged_1: NaT
+  imaged_by_1: null
+  key_takeaways_1: null
+  imaging_data_link_1: null
+  type_of_imaging_(#2): null
+  date imaged_(#2): null
+  imaged_by_(#2): null
+  key_takeaways_(#2): null
+  imaging_data_link_(#2): null
+  type_of_imaging_(#3): null
+  date imaged_(#3): NaT
+  imaged_by_(#3): null
+  key_takeaways_(#3): null
+  imaging_data_link_(#3): null
+  Sample_Storage: null
+  Notes: null
+  tadata:
+  entry_name: PAO1_MOPS_culture_082824_EPgc
+  mainfile: PAO1_MOPS_culture_082824_EPgc.archive.json

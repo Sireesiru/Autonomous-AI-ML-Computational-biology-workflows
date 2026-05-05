@@ -1,0 +1,309 @@
+definitions:
+  name: braveschemasecond
+  sections:
+    Section_one:
+      base_sections:
+        - nomad.datamodel.data.ArchiveSection
+      quantities:
+        # -----------------------------
+        # GENERAL INFORMATION
+        # -----------------------------
+        sample_name:
+          type: str
+          description: Sample naming convention or ID.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Sample
+
+        preparer:
+          type: str
+          description: Name of the person who prepared the sample.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Name of Preparer
+
+        date_prepared:
+          type: Datetime
+          description: Date the sample was prepared.
+          m_annotations:
+            eln:
+              component: DateTimeEditQuantity
+              label: Date Prepared
+
+        sample_comment:
+          type: str
+          description: Additional comments about the sample.
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Sample Comment
+        
+        # -----------------------------
+        # CULTURE INFORMATION
+        # -----------------------------
+        species:
+          type: str
+          description: Species used in the culture.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Species
+        
+        medium:
+          type: str
+          description: Culture medium used.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Medium
+        
+        temperature:
+          type: float
+          unit: °C
+          description: Culture growth temperature.
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              label: Temp (°C)
+        
+        culture_details:
+          type: str
+          description: Additional culture details.
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Culture Details
+        
+        # -----------------------------
+        # PROTOCOL DETAILS
+        # -----------------------------
+        biofilm:
+          type: str
+          description: Whether a biofilm was grown.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Biofilm? (yes/no)
+        
+        od600:
+          type: str
+          description: Optical density measurement.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: OD600
+        
+        substrate:
+          type: str
+          description: Substrate the culture was grown on.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Substrate
+        
+        replicates:
+          type: str
+          description: Number or type of replicates.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Replicates?
+        
+        volume_cells_added:
+          type: str
+          description: Volume of cells added.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Vol. Cells Added
+        
+        incubation_temp:
+          type: float
+          unit: °C
+          description: Temperature during incubation.
+          m_annotations:
+            eln:
+              component: NumberEditQuantity
+              label: Incubation Temp (°C)
+        
+        medium_replaced:
+          type: str
+          description: Whether medium was replaced.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Medium Replaced?
+        
+        incubation_time:
+          type: str
+          description: Duration of incubation.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Incubation Time
+        
+        washing:
+          type: str
+          description: Washing procedure.
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Washing
+        
+        fixed:
+          type: str
+          description: Whether the sample was fixed.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Fixed?
+        
+        stains:
+          type: str
+          description: Stains or dyes used.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Stains?
+        
+        timecourse:
+          type: str
+          description: Whether the experiment is a timecourse.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Timecourse?
+        
+        eln_link:
+          type: str
+          description: External ELN or documentation link.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: ELN Link
+        
+        Sample_Storage:
+          type: str
+          description: Where or how the sample is stored or disposed.
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Sample Storage
+        
+        Notes:
+          type: str
+          description: Any additional notes to be included.
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Additional Notes
+              
+        # -----------------------------
+        # IMAGING INFORMATION
+        # -----------------------------
+        type_of_imaging_1:
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Type of Imaging (#1)
+        
+        date_imaged_1:
+          type: Datetime
+          m_annotations:
+            eln:
+              component: DateTimeEditQuantity
+              label: Date Imaged (#1)
+              
+        imaged_by_1:
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Imaged By (#1)
+        
+        key_takeaways_1:
+          type: str
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Key Takeaways (#1)
+        
+        imaging_data_link_1:
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Image Data Link (#1)
+             
+        type_of_imaging_(#2):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Type of Imaging (#2)
+        
+        date_imaged_(#2):
+          type: Datetime
+          m_annotations:
+            eln:
+              component: DateTimeEditQuantity
+              label: Date Imaged (#2)
+              
+        imaged_by_(#2):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Imaged By (#2)
+        
+        key_takeaways_(#2):
+          type: str
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Key Takeaways (#2)
+        
+        imaging_data_link_(#2):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Image Data Link (#2)
+              
+        type_of_imaging_(#3):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Type of Imaging (#3)
+        
+        date_imaged_(#3):
+          type: Datetime
+          m_annotations:
+            eln:
+              component: DateTimeEditQuantity
+              label: Date Imaged (#3)
+              
+        imaged_by_(#3):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Imaged By (#3)
+        
+        key_takeaways_(#3):
+          type: str
+          m_annotations:
+            eln:
+              component: RichTextEditQuantity
+              label: Key Takeaways (#3)
+        
+        imaging_data_folder_link_(#3):
+          type: str
+          m_annotations:
+            eln:
+              component: StringEditQuantity
+              label: Image Data Link (#3)
